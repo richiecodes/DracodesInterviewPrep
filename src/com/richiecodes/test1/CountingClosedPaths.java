@@ -7,12 +7,17 @@ public class CountingClosedPaths {
 
         while (n != 0) {
             int curr = n % 10;
-            if (curr == 0 || curr == 4 || curr == 6 || curr == 9) {
-                sum += 1;
-            }
+//            if (curr == 0 || curr == 4 || curr == 6 || curr == 9) {
+//                sum += 1;
+//            }
+//
+//            if (curr == 8) {
+//                sum += 2;
+//            }
 
-            if (curr == 8) {
-                sum += 2;
+            switch (curr) {
+                case 0, 4, 6, 9 -> sum += 1;
+                case 8 -> sum += 2;
             }
 
             n /= 10;
